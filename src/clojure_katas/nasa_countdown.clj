@@ -3,5 +3,6 @@
 ;; Countdown should return a list counting down from the start all the
 ;; way to zero
 
-(defn countdown [start])
+(defn countdown [start]
+  (range start -1 -1))
 

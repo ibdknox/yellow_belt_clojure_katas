@@ -7,5 +7,11 @@
 ;; A knight is addressed as Sir
 ;; The return string should be "Hello (the title) (last name)
 
-(defn welcome [last-name is-woman? is-sir?])
+(defn welcome [last-name is-woman? is-sir?]
+  (let [greeting (cond
+                   (and is-woman? is-sir?) "Lady "
+                   is-sir? "Sir "
+                   is-woman? "Ms. "
+                   :else "Mr. ")]
+    (str "Welcome " greeting last-name)))
 
